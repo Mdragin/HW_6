@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="content" class="container">
+        <div class="row">
+
+            <div id="content-left" class="col-md-3">
+                <form>
+                    <label for="city-search">Search for a City:</label>
+                    <div class="form-row">
+                        <input id="city-search" class="form-control" name="city" value="Seattle"></input>
+
+                        <button id="search-button" class="btn btn-primary" type="submit"><i
+                                class="fas fa-search"></i></button>
+                    </div>
+                </form>
+                <div id="city-error"></div>
+
+                <ul id="results-city" class="list-group mt-4"></ul>
+
+                <a id="storage-clear" href="#"></a>
+            </div>
+
+
+            <div id="content-right" class="col-md-9 pt-4">
+
+                <div id="weather-current" class="border rounded"></div>
+
+                <div id="five-day-forecast" class="mt-5"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
